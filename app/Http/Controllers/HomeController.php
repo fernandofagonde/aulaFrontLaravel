@@ -21,8 +21,9 @@ class HomeController extends Controller
 
     public function index() {
         
-        $pessoas   = $this->aulaService->getPessoas();
-        
-        return view('home', ['pessoas'=>$pessoas]);
+        $pessoas   = $this->aulaService->getPessoas()->all();;
+
+
+        return view('home', ['pessoas' => $pessoas]);
     }
 }

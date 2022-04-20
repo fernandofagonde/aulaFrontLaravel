@@ -1,8 +1,7 @@
 
-@section('content_header')
     @foreach ($pessoas as $pessoa)
+
         <tr>
-            <td>{{ $pessoa['nome'] }}</td>        
+            <td>{{ $pessoas['nome'] }}</td>        
         </tr>
     @endforeach
-@stop

@@ -14,10 +14,9 @@ class AulaService{
     }
 
     public function getPessoas()
-    {
- 
-        $response = Http::get($this->host .'/api/pessoas');        
- 
+    { 
+        $response = Http::get($this->host .'/api/pessoas')->collect();        
+
         return $response;
     }
 
