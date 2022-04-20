@@ -22,7 +22,7 @@ class HomeController extends Controller
     public function index() {
         
         $pessoas   = $this->aulaService->getPessoas()->all();;
-
+        dd($pessoas);
 
         return view('home', ['pessoas' => $pessoas]);
     }
