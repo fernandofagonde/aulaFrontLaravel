@@ -1,7 +1,8 @@
-
+<table>
     @foreach ($pessoas as $pessoa)
 
         <tr>
-            <td>{{ $pessoas['nome'] }}</td>        
+            <td>{{ $pessoa['nome'] }}</td>        
         </tr>
     @endforeach
+</table>
