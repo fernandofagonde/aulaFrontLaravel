@@ -26,4 +26,15 @@ class HomeController extends Controller
 
         return view('home', ['pessoas' => $pessoas]);
     }
+
+    public function createPessoa(Request $request){
+
+        $pessoas   = $this->aulaService->getPessoas()->all();     
+        $request['id'] = count($pessoas)+1;
+       
+        $response = $this->aulaService->createPessoas($request); 
+        $pessoas   = $this->aulaService->getPessoas()->all();   
+        
+        return view('home', ['pessoas' => $pessoas, 'response'=>$response]);
+    }
 }

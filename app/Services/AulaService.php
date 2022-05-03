@@ -20,4 +20,16 @@ class AulaService{
         return $response;
     }
 
+    public function createPessoas($request)
+    {
+        $json = [
+                "email" => $request['email'],
+                "id" => $request['id'],
+                "nome" => $request['nome']
+            ];
+
+        $response = Http::post($this->host . '/api/pessoa', $json);
+        return $response;
+    }
+
 }
