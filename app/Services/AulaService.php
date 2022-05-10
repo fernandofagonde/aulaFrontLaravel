@@ -24,7 +24,9 @@ class AulaService{
     {
         $json = [
                 "email" => $request['email'],
+                "telefone" => $request['telefone'],
                 "id" => $request['id'],
+                "cpf" => $request['cpf'],
                 "nome" => $request['nome']
             ];
 

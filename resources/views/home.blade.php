@@ -9,7 +9,9 @@
     @foreach ($pessoas as $pessoa)
         <tr>
             <td>{{$pessoa['id']}} - {{ $pessoa['nome'] }}</td>  
-            <td>{{ $pessoa['email'] }}</td>       
+            <td>{{ $pessoa['email'] }}</td> 
+            <td>{{ $pessoa['telefone'] }}</td> 
+            <td>{{ $pessoa['cpf'] }}</td>       
         </tr>
     @endforeach
 </table>
@@ -19,5 +21,7 @@
     @csrf
     Nome: <input name="nome"><br />
     E-mail:<input name="email"><br/>
+    Telefone:<input name="telefone"><br/>
+    CPF:<input name="cpf"><br/>
     <input type="submit" value="enviar">
 </form>
